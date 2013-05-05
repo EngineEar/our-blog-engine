@@ -1,11 +1,21 @@
 Ourblog::Application.routes.draw do
-  get "static_pages/home"
+#  get "static_pages/home"
 
-  get "static_pages/about"
+#  get "static_pages/about"
 
-  get "static_pages/index"
+#  get "static_pages/index"
 
   resources :articles
+
+  root to: 'static_pages#home'
+
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  
+  match '/index',    to: 'static_pages#index'
+  match '/about',   to: 'static_pages#about'
+  match '/contact', to: 'static_pages#contact'
 
 
   # The priority is based upon order of creation:
