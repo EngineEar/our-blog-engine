@@ -17,6 +17,7 @@ html {
 }
 body {
   padding-top: 60px;
+  background: url('fabric_of_squares_gray.png') repeat 0 0;
 }
 section {
   overflow: auto;
@@ -33,7 +34,7 @@ textarea {
 
 /* typography */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: 1.7;
 }
 h1 {
   font-size: 3em;
@@ -42,12 +43,21 @@ h1 {
   text-align: center;
 }
 h2 {
-  font-size: 1.7em;
+  font-size: 2.1em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: $grayLight;
+}
+
+h3 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
 }
 p {
 font-size: 1.1em; line-height: 1.7em;
@@ -76,24 +86,29 @@ footer {
 margin-top: 45px;
 padding-top: 5px;
 border-top: 1px solid $grayMediumLight; color: $grayLight;
+border-bottom: 1px solid $grayMediumLight; color: $grayLight;
+padding-bottom: 25px;
+
 a {
-    color: $gray;
+    color: $grayLight;
     &:hover {
       color: $grayDarker;
-            }
-  }
+      text-decoration: none;
+    }
+}
 small {
     float: left;
-      }
-  ul {
+}
+ul {
     float: right;
     list-style: none;
     li {
-float: left;
+      float: left;
       margin-left: 10px;
-       }
-      } 
-        }
+    }
+} 
+
+}
 
 /* miscellaneous */
 .debug_dump {
@@ -156,47 +171,9 @@ input {
   @extend .error;
 }
 
-/* users index */
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }
-  }
-}
 
-/* microposts */
+/* icons */
 
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  } 
-}
-
-.content {
-  display: block;
-}
-
-.timestamp {
-  color: $grayLight;
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  } 
+.btn i{
+  margin-right: 8px;
 }
