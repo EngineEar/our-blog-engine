@@ -1,4 +1,7 @@
 Ourblog::Application.routes.draw do
+  resources :users
+
+
 #  get "static_pages/home"
 
 #  get "static_pages/about"
@@ -13,7 +16,7 @@ Ourblog::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   
-  match '/index',    to: 'static_pages#index'
+  match '/index',   to: 'static_pages#index'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
