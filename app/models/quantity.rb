@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: quantities
+#
+#  id         :integer          not null, primary key
+#  amount     :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Quantity < ActiveRecord::Base
   attr_accessible :amount, :ingredient, :ingredient_attributes
 
