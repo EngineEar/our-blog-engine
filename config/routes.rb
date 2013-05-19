@@ -1,4 +1,9 @@
 Ourblog::Application.routes.draw do
+  resources :recipes
+
+
+  get "ingredients/new"
+
   get "users/new"
 
   resources :users

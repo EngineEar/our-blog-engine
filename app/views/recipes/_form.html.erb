@@ -1,0 +1,12 @@
+<%= semantic_form_for @recipe do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :instructions %>
+    <%= f.input :posted_on %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

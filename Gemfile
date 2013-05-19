@@ -8,6 +8,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'pg', '0.12.2'
 gem 'formtastic'
+gem 'cocoon'
 gem 'font-awesome-sass-rails'
 
 # Bundle edge Rails instead:
