@@ -2,10 +2,12 @@
 #
 # Table name: quantities
 #
-#  id         :integer          not null, primary key
-#  amount     :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :integer          not null, primary key
+#  amount        :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  recipe_id     :integer
+#  ingredient_id :integer
 #
 
 require 'spec_helper'

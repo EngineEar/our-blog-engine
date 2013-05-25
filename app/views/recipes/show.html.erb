@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Posted on:</b>
+  <%= @recipe.posted_on %>
+</p>
+
+<p>
   <b>Description:</b>
   <%= @recipe.description %>
 </p>
@@ -15,11 +20,19 @@
   <%= @recipe.instructions %>
 </p>
 
+
+
 <p>
-  <b>Posted on:</b>
-  <%= @recipe.posted_on %>
+  <b>Ingredients:</b>	
+  <ol>	
+  <% for ingredient in @recipe.ingredients do%>
+  <li><%= ingredient[:name] %> <%= @recipe.quantities.find_by_ingredient_id(ingredient.id).amount %>g</li>
+  <% end %>
+  </ol>
 </p>
 
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
+
+ 

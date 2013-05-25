@@ -12,12 +12,12 @@
 #
 
 class Recipe < ActiveRecord::Base
-  attr_accessible :description, :instructions, :posted_on, :title
+  attr_accessible :description, :instructions, :posted_on, :title, :quantities_attributes
 
-  validates :title, :presence => true
-  validates :description, :presence => true
-  validates :instructions, :presence => true
-  belongs_to :user
+  #validates :title, :presence => true
+  #validates :description, :presence => true
+  #validates :instructions, :presence => true
+  #belongs_to :user
 
   has_many :quantities
   has_many :ingredients, :through => :quantities
