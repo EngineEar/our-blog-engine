@@ -177,3 +177,29 @@ input {
 .btn i{
   margin-right: 8px;
 }
+
+/* my recipe instructions box */
+
+#instructions_box {
+  background: #eeaae3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  border: 3px dashed $grayMediumLight;
+}
+.recipe_title {
+  color: #c2caa3;
+  text-align: left;
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+  font-size: 2.2em;
+}
+
+.recipe_date {
+    font-style: italic;
+    font-size: 0.9em;
+}

@@ -1,38 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
+<h1 class="recipe_title">
   <%= @recipe.title %>
-</p>
+</h1>
 
-<p>
-  <b>Posted on:</b>
+<div class="recipe_date">
+  <span class="separator">Posted on </span>
   <%= @recipe.posted_on %>
-</p>
+</div>
 
-<p>
-  <b>Description:</b>
+<div class="recipe_description">
   <%= @recipe.description %>
-</p>
+</div>
 
-<p>
-  <b>Instructions:</b>
-  <%= @recipe.instructions %>
-</p>
+<div id="instructions_box">
+  <p>
+    <b>Ingredients:</b>	
+    <ul class="icons">	
+    <% for ingredient in @recipe.ingredients do%>
+    <li><i class="icon-beaker"></i><%= ingredient[:name] %> <%= @recipe.quantities.find_by_ingredient_id(ingredient.id).amount %> g</li>
+    <% end %>
+    </ul>
+  </p>
+   <p>
+    <%= @recipe.instructions %>
+  </p>
+</div>
 
-
-
-<p>
-  <b>Ingredients:</b>	
-  <ol>	
-  <% for ingredient in @recipe.ingredients do%>
-  <li><%= ingredient[:name] %> <%= @recipe.quantities.find_by_ingredient_id(ingredient.id).amount %>g</li>
-  <% end %>
-  </ol>
-</p>
-
-
+<div>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
-
+</div>
  
